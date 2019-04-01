@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Election Match
 
-## Available Scripts
+(insert screenshot of app logo here)
 
-In the project directory, you can run:
+Election Match is a basic app that matches users to nearby elections based on their address. When the user submits an address form, the address is translated into OCD-IDs or [Open Civic Data division identifiers](https://opencivicdata.readthedocs.io/en/latest/data/datatypes.html), and then used to query the Democracy Works Elections API for upcoming elections in the user's area. Any elections returned are displayed for the user.
 
-### `npm start`
+## ⚙️ Initial Setup
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+OS X & Linux:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+After cloning this repo type the following commands into your terminal:
 
-### `npm test`
+```sh
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To view tests, quit your server (cmd + c) and type the following commands into your terminal:
 
-### `npm run build`
+```sh
+npm test
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The user is presented with an address form.
+(insert screenshot of above feature)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The user submits the form and their address is translated into some OCD-IDs. The Democracy Works Election API is queried for upcoming elections in their area.
+(insert screenshot of above feature)
 
-### `npm run eject`
+The user's view updates to display any elections returned by the API.
+(insert screenshot of above feature)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Future Iterations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Planned enhancements include:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- (insert potential enhancement here)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🏗 Tech Stack List
 
-## Learn More
+- React
+- React Router 4
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📥 How To Contribute
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork this repo
+2. Create your feature branch (`git checkout -b feature/thingamajig`)
+3. Commit your changes (`git commit -am 'Added a cool doodad!'`)
+4. Push to the branch (`git push origin feature/thingamajig`)
+5. Create a new Pull Request
 
-### Code Splitting
+## 🚀 Core Contributors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Tanjie Mcmeans**
+Github:[https://github.com/TMcMeans](https://github.com/TMcMeans/)
