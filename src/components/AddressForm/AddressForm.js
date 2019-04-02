@@ -21,25 +21,36 @@ class AddressForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(this.state);
+    this.setState({
+      city: '',
+      state: ''
+    });
   };
 
   render() {
-    const { city, state } = this.state;
+    const { city, state, isValid } = this.state;
 
     return (
       <form className="address-form" onSubmit={this.handleSubmit}>
-        <label for="street">Street Address</label>
+        <label>Street Address</label>
         <input type="text" placeholder="street" />
-        <label for="city">City</label>
+        <label>City</label>
         <input
           type="text"
           placeholder="city"
           name="city"
           value={city}
           onChange={this.handleChange}
+          required
         />
-        <label for="state">State</label>
-        <select name="state" value={state} onChange={this.handleChange}>
+        <label>State</label>
+        <select
+          name="state"
+          value={state}
+          onChange={this.handleChange}
+          required
+        >
+          <option value="">--Select a state--</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -91,7 +102,7 @@ class AddressForm extends Component {
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
-        <label for="zipcode">Zipcode</label>
+        <label>Zipcode</label>
         <input type="text" placeholder="zipcode" />
         <input type="submit" value="submit" />
       </form>
