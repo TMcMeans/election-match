@@ -10,12 +10,21 @@ class AddressForm extends Component {
     };
   }
 
+  handleChange = () => {};
+
+  handleSubmit = () => {};
+
   render() {
     return (
       <form className="address-form">
         <input type="text" placeholder="street" />
-        <input type="text" placeholder="city" name={this.state.city} />
-        <select name={this.state.state}>
+        <input
+          type="text"
+          placeholder="city"
+          name="city"
+          value={this.state.city}
+        />
+        <select name="state" value={this.state.state}>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -68,6 +77,7 @@ class AddressForm extends Component {
           <option value="WY">Wyoming</option>
         </select>
         <input type="text" placeholder="zipcode" />
+        <input type="submit" />
       </form>
     );
   }
