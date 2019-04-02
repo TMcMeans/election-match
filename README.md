@@ -10,14 +10,14 @@ OS X & Linux:
 
 After cloning this repo type the following commands into your terminal:
 
-```sh
+```
 npm install
 npm start
 ```
 
 To view tests, quit your server (cmd + c) and type the following commands into your terminal:
 
-```sh
+```
 npm test
 ```
 
@@ -40,18 +40,24 @@ Planned enhancements include:
 
 ## 🏗 Tech Stack List
 
+- HTML/CSS
 - React
 - React Router 4
+- Jest
+- Enzyme
+- Travis CI
+- Heroku
 
 ## 📥 How To Contribute
 
 1. Fork this repo
 2. Create your feature branch (`git checkout -b feature/thingamajig`)
-3. Commit your changes (`git commit -am 'Added a cool doodad!'`)
+3. Commit your changes (`git commit -m 'Added a cool doodad!'`)
 4. Push to the branch (`git push origin feature/thingamajig`)
 5. Create a new Pull Request
 
 ## 🚀 Core Contributors
 
-**Tanjie Mcmeans**
-Github:[https://github.com/TMcMeans](https://github.com/TMcMeans/)
+**Tanjie McMeans**
+
+- [Github](https://github.com/TMcMeans/)
