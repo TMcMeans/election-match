@@ -71,3 +71,5 @@ class AddressForm extends Component {
     );
   }
 }
+
+export default AddressForm;

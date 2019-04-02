@@ -10,6 +10,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Election Count</h1>
         </header>
+        <AdderessForm />
       </div>
     );
   }
