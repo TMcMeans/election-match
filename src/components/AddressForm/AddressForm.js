@@ -9,12 +9,13 @@ class AddressForm extends Component {
       state: ''
     };
   }
+
   render() {
     return (
-      <form>
+      <form className="address-form">
         <input type="text" placeholder="street" />
-        <input type="text" placeholder="city" />
-        <select name="state">
+        <input type="text" placeholder="city" name={this.state.city} />
+        <select name={this.state.state}>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -65,8 +66,8 @@ class AddressForm extends Component {
           <option value="WV">West Virginia</option>
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
-          <input type="text" placeholder="zipcode" />
         </select>
+        <input type="text" placeholder="zipcode" />
       </form>
     );
   }
