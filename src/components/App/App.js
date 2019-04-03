@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CardContainer } from '../CardContainer/CardContainer';
 import { cleanAddress } from '../../helpers/dataCleaner';
 import { fetchElections } from '../../helpers/apicalls';
 import './App.css';
@@ -40,6 +41,10 @@ class App extends Component {
         </p>
         <div className="flex-wrapper">
           <AddressForm submitForm={this.submitForm} />
+          <CardContainer
+            electionData={this.state.electionData}
+            error={this.state.error}
+          />
         </div>
       </div>
     );
