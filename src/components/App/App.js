@@ -4,6 +4,10 @@ import './App.css';
 import AddressForm from '../AddressForm/AddressForm';
 
 class App extends Component {
+  submitForm = address => {
+    console.log(address);
+  };
+
   render() {
     return (
       <div className="app">
@@ -13,7 +17,7 @@ class App extends Component {
           your area.
         </p>
         <div className="flex-wrapper">
-          <AddressForm />
+          <AddressForm submitForm={this.submitForm} />
         </div>
       </div>
     );

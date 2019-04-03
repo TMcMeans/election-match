@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './AddressForm.css';
 
 class AddressForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       city: '',
       state: ''
@@ -11,7 +11,6 @@ class AddressForm extends Component {
   }
 
   handleChange = event => {
-    console.log(event.target);
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -20,7 +19,8 @@ class AddressForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.submitForm(this.state);
+
     this.setState({
       city: '',
       state: ''
