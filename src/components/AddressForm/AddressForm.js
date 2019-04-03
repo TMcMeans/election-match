@@ -28,7 +28,7 @@ class AddressForm extends Component {
   };
 
   render() {
-    const { city, state, isValid } = this.state;
+    const { city, state } = this.state;
 
     return (
       <form className="address-form" onSubmit={this.handleSubmit}>
