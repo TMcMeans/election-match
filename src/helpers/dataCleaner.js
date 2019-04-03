@@ -1,7 +1,8 @@
 export const cleanAddress = uncleanAddress => {
-  let place = uncleanAddress.city.toLowerCase();
-  place.replace(' ', '_');
-  let state = uncleanAddress.state.toLowerCase();
+  const place = uncleanAddress.city.toLowerCase().replace(' ', '_');
+  const state = uncleanAddress.state.toLowerCase();
 
-  return { place, state };
+  const url = `https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:${state},ocd-division/country:us/state:${state}/place:${place}`;
+
+  return url;
 };

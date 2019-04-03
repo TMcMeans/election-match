@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
+import { cleanAddress } from '../../helpers/dataCleaner';
+import { fetchElections } from '../../helpers/apicalls';
 import './App.css';
 
 import AddressForm from '../AddressForm/AddressForm';
 
 class App extends Component {
+  state = {
+    electionData: {},
+    error: {}
+  };
+
   submitForm = address => {
-    console.log(address);
+    const ocd_id = cleanAddress(address);
+    this.handleGetRequest(ocd_id);
+  };
+
+  handleGetRequest = async url => {
+    try {
+      let electionData = await fetchElections(url);
+      this.setState({
+        electionData
+      });
+    } catch (error) {
+      console.log(error);
+      this.setState({
+        error
+      });
+    }
   };
 
   render() {

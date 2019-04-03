@@ -1,6 +1,4 @@
-export const fetchElections = async address => {
-  const url = `https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:${state},ocd-division/country:us/state:${state}/place:${place}`;
-
+export const fetchElections = async url => {
   let response = await fetch(url, {
     method: 'GET',
     headers: {
