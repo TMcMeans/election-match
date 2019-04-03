@@ -33,7 +33,7 @@ class AddressForm extends Component {
     return (
       <form className="address-form" onSubmit={this.handleSubmit}>
         <label>Street Address</label>
-        <input type="text" placeholder="street" />
+        <input type="text" placeholder="street" required />
         <label>City</label>
         <input
           type="text"
@@ -103,7 +103,7 @@ class AddressForm extends Component {
           <option value="WY">Wyoming</option>
         </select>
         <label>Zipcode</label>
-        <input type="text" placeholder="zipcode" />
+        <input type="text" placeholder="zipcode" required />
         <input type="submit" value="submit" />
       </form>
     );

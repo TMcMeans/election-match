@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { CardContainer } from '../CardContainer/CardContainer';
 import { cleanAddress } from '../../helpers/dataCleaner';
-import { fetchElections } from '../../helpers/apicalls';
+// import { fetchElections } from '../../helpers/apicalls';
+import { mockElectionData } from '../../helpers/mockElectionData';
 import './App.css';
 
 import AddressForm from '../AddressForm/AddressForm';
 
 class App extends Component {
   state = {
-    electionData: {},
+    electionData: [],
     error: ''
   };
 
@@ -19,9 +20,9 @@ class App extends Component {
 
   handleGetRequest = async url => {
     try {
-      let electionData = await fetchElections(url);
+      // let electionData = await fetchElections(url);
       this.setState({
-        electionData
+        electionData: mockElectionData
       });
     } catch (error) {
       console.log(error);
@@ -34,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>Election Count</h1>
+        <h1>Election Match</h1>
         <p>
           Fill out the form and on submit, see a list of upcoming elections in
           your area.

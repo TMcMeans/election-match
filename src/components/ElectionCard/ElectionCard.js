@@ -8,3 +8,5 @@
 // whether or not same-day voter registration is available
 // whether or not absentee voting requires an excuse
 // (for primary elections) whether participation is open to voters without a party affiliation, or closed to party members only
+
+export const ElectionCard = ({ election }) => {};
