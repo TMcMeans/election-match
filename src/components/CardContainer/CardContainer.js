@@ -8,7 +8,11 @@ export const CardContainer = ({ electionData, error }) => {
 
   return (
     <div className="card-container">
-      <h1>Your results below:</h1>
+      {error ? (
+        <h1>Sorry there was an issue handling your request</h1>
+      ) : (
+        <h1>Your results below:</h1>
+      )}
       {electionCards}
     </div>
   );
