@@ -1,5 +1,5 @@
 export const fetchElections = async address => {
-  let place = address.city;
+  let place = address.city.toLowerCase();
   place.replace(' ', '_');
   const state = address.state.toLowerCase();
   const url = `https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:${state},ocd-division/country:us/state:${state}/place:${place}`;
@@ -12,6 +12,7 @@ export const fetchElections = async address => {
       }
     });
     let data = await response.json();
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
