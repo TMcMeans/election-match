@@ -1,16 +1,20 @@
 import React from 'react';
 
-export const ElectionCard = ({ election }) => {
+export const ElectionCard = props => {
+  console.log(props['district-divisions']);
   return (
     <div className="election-card">
       <h1>Election Card</h1>
+      {/* <h3>{description}</h3> */}
+      {/* <h3>{date}</h3>
+      <h3>Jurisdiction: {}</h3>
+      <a href={polling - place - url}>Your polling place</a>
+      <a href={website}>Your state's election website</a> */}
     </div>
   );
 };
 
 //Election object descriptors:
-// a simple descriptive name
-// the election date
 // the jurisdiction it affects (defined using an Open Civic Data Identifier, or OCD-ID)
 // a type label (e.g. - municipal, special, school)
 // the deadline to register to vote

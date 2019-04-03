@@ -6,3 +6,7 @@ export const cleanAddress = uncleanAddress => {
 
   return url;
 };
+
+export const cleanElectionData = uncleanElectionData => {
+  console.log(uncleanElectionData);
+};

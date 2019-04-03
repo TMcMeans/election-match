@@ -3,7 +3,7 @@ import { ElectionCard } from '../ElectionCard/ElectionCard';
 
 export const CardContainer = ({ electionData, error }) => {
   const electionCards = electionData.map(election => (
-    <ElectionCard election={election} key={Date.now()} />
+    <ElectionCard {...election} key={election.id} />
   ));
 
   return (

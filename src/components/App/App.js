@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { CardContainer } from '../CardContainer/CardContainer';
-import { cleanAddress } from '../../helpers/dataCleaner';
+import { cleanAddress, cleanElectionData } from '../../helpers/dataCleaner';
 // import { fetchElections } from '../../helpers/apicalls';
 import { mockElectionData } from '../../helpers/mockElectionData';
 import './App.css';
@@ -21,6 +21,7 @@ class App extends Component {
   handleGetRequest = async url => {
     try {
       // let electionData = await fetchElections(url);
+      // let cleanedElectionData = cleanElectionData(electionData);
       this.setState({
         electionData: mockElectionData
       });
