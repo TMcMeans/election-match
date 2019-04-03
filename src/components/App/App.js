@@ -9,7 +9,7 @@ import AddressForm from '../AddressForm/AddressForm';
 class App extends Component {
   state = {
     electionData: {},
-    error: {}
+    error: ''
   };
 
   submitForm = address => {
