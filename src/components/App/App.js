@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CardContainer } from '../CardContainer/CardContainer';
 import { cleanAddress, cleanElectionData } from '../../helpers/dataCleaner';
-// import { fetchElections } from '../../helpers/apicalls';
+import { fetchElections } from '../../helpers/apicalls';
 import { mockElectionData } from '../../helpers/mockElectionData';
 import './App.css';
 
@@ -15,12 +15,14 @@ class App extends Component {
 
   submitForm = address => {
     const ocd_id = cleanAddress(address);
+    //post to server
+
     this.handleGetRequest(ocd_id);
   };
 
   handleGetRequest = async url => {
     try {
-      // let electionData = await fetchElections(url);
+      let electionData = await fetchElections(url);
       // let cleanedElectionData = cleanElectionData(electionData);
       this.setState({
         electionData: mockElectionData

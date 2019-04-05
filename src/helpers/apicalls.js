@@ -13,3 +13,21 @@ export const fetchElections = async url => {
     console.log(`${response.status}: ${response.statusText}`);
   }
 };
+
+export const postAddress = async url => {
+  let response = await fetch('http://localhost:3000/api/search', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      url
+    })
+  });
+
+  if (response.ok) {
+    console.log('sucessfully sent user address to server');
+  } else {
+    console.log(`${response.status}: ${response.statusText}`);
+  }
+};
