@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CardContainer } from '../CardContainer/CardContainer';
 import { cleanAddress, cleanElectionData } from '../../helpers/dataCleaner';
-import { fetchElections } from '../../helpers/apicalls';
+import { fetchElections, postAddress } from '../../helpers/apicalls';
 import { mockElectionData } from '../../helpers/mockElectionData';
 import './App.css';
 
@@ -13,11 +13,11 @@ class App extends Component {
     error: ''
   };
 
-  submitForm = address => {
+  submitForm = async address => {
     const ocd_id = cleanAddress(address);
     //post to server
-
-    this.handleGetRequest(ocd_id);
+    await postAddress(ocd_id);
+    // this.handleGetRequest(ocd_id);
   };
 
   handleGetRequest = async url => {
