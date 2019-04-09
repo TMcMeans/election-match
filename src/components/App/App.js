@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { CardContainer } from '../CardContainer/CardContainer';
-import { cleanAddress, cleanElectionData } from '../../helpers/dataCleaner';
+import { cleanAddress } from '../../helpers/dataCleaner';
 import { fetchElections, postAddress } from '../../helpers/apicalls';
 import { mockElectionData } from '../../helpers/mockElectionData';
 import './App.css';
@@ -15,17 +15,17 @@ class App extends Component {
 
   submitForm = async address => {
     const ocd_id = cleanAddress(address);
-    //post to server
+    //post url to proxy server
     await postAddress(ocd_id);
-    // this.handleGetRequest(ocd_id);
+    //get external data back from proxy server
+    this.handleGetRequest();
   };
 
-  handleGetRequest = async url => {
+  handleGetRequest = async () => {
     try {
-      let electionData = await fetchElections(url);
-      // let cleanedElectionData = cleanElectionData(electionData);
+      let electionData = await fetchElections();
       this.setState({
-        electionData: mockElectionData
+        electionData: electionData
       });
     } catch (error) {
       console.log(error);
