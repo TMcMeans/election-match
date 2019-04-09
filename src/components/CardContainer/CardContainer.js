@@ -1,5 +1,6 @@
 import React from 'react';
 import { ElectionCard } from '../ElectionCard/ElectionCard';
+import './CardContainer.css';
 
 export const CardContainer = ({ electionData, error }) => {
   const electionCards = electionData.map(election => (
@@ -9,9 +10,9 @@ export const CardContainer = ({ electionData, error }) => {
   return (
     <div className="card-container">
       {error ? (
-        <h1>Sorry there was an issue handling your request</h1>
+        <h2>Sorry there was an issue handling your request</h2>
       ) : (
-        <h1>Your results below:</h1>
+        <h2>Your results:</h2>
       )}
       {electionCards}
     </div>

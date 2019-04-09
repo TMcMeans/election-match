@@ -1,0 +1,29 @@
+.address-form {
+  padding: 10px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.text-input,
+.submit-input {
+  padding: 10px;
+  font-size: 1em;
+  width: 75%;
+  margin: 5px 0 10px 0;
+}
+
+.select-input {
+  padding: 10px;
+  font-size: 1em;
+  width: 79%;
+  margin: 5px 0 10px 0;
+}
+
+.submit-input {
+  background: #bf0a30;
+  color: white;
+  width: 79%;
+  font-weight: bold;
+  font-size: 1em;
+}
