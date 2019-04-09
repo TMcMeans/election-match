@@ -33,9 +33,15 @@ class AddressForm extends Component {
     return (
       <form className="address-form" onSubmit={this.handleSubmit}>
         <label>Street Address</label>
-        <input type="text" placeholder="street" required />
+        <input
+          className="text-input"
+          type="text"
+          placeholder="street"
+          required
+        />
         <label>City</label>
         <input
+          className="text-input"
           type="text"
           placeholder="city"
           name="city"
@@ -45,6 +51,7 @@ class AddressForm extends Component {
         />
         <label>State</label>
         <select
+          className="select-input"
           name="state"
           value={state}
           onChange={this.handleChange}
@@ -103,8 +110,17 @@ class AddressForm extends Component {
           <option value="WY">Wyoming</option>
         </select>
         <label>Zipcode</label>
-        <input type="text" placeholder="zipcode" required />
-        <input type="submit" value="submit" />
+        <input
+          className="text-input"
+          type="text"
+          placeholder="zipcode"
+          required
+        />
+        <input
+          className="submit-input"
+          type="submit"
+          value="Find your elections"
+        />
       </form>
     );
   }

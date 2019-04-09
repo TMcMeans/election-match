@@ -38,8 +38,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>Election Match</h1>
-        <p>
+        <h1 className="title">Election Match</h1>
+        <p className="directions">
           Fill out the form and on submit, see a list of upcoming elections in
           your area.
         </p>

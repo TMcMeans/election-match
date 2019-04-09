@@ -1,0 +1,21 @@
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 80%;
+}
+
+.title {
+  text-align: center;
+  border: 2px solid black;
+  background: #002868;
+  color: white;
+  margin-top: 0;
+  padding: 10px 0 10px 0;
+}
+
+.directions {
+  font-size: 1.2em;
+  text-align: center;
+}
