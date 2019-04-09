@@ -1,21 +1,33 @@
-export const fetchElections = async address => {
-  let place = address.city.toLowerCase();
-  place.replace(' ', '_');
-  const state = address.state.toLowerCase();
-  const url = `https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:${state},ocd-division/country:us/state:${state}/place:${place}`;
+export const fetchElections = async url => {
+  let response = await fetch(url, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json'
+    }
+  });
 
-  try {
-    let response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
+  if (response.ok) {
+    let electionData = await response.json();
+    return electionData;
+  } else {
+    console.log(`${response.status}: ${response.statusText}`);
   }
 };
 
-// https://api.turbovote.org/elections/upcoming?district-divisions=ocd-division/country:us/state:ma,ocd-division/country:us/state:ma/place:wayland
+export const postAddress = async ocd_id => {
+  let response = await fetch('http://localhost:3000/api/search', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      ocd_id
+    })
+  });
+
+  if (response.ok) {
+    console.log('sucessfully sent user address to server');
+  } else {
+    console.log(`${response.status}: ${response.statusText}`);
+  }
+};

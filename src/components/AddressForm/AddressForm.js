@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './AddressForm.css';
 
 class AddressForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       city: '',
       state: ''
@@ -11,7 +11,6 @@ class AddressForm extends Component {
   }
 
   handleChange = event => {
-    console.log(event.target);
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -20,7 +19,8 @@ class AddressForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.submitForm(this.state);
+
     this.setState({
       city: '',
       state: ''
@@ -33,7 +33,7 @@ class AddressForm extends Component {
     return (
       <form className="address-form" onSubmit={this.handleSubmit}>
         <label>Street Address</label>
-        <input type="text" placeholder="street" />
+        <input type="text" placeholder="street" required />
         <label>City</label>
         <input
           type="text"
@@ -103,7 +103,7 @@ class AddressForm extends Component {
           <option value="WY">Wyoming</option>
         </select>
         <label>Zipcode</label>
-        <input type="text" placeholder="zipcode" />
+        <input type="text" placeholder="zipcode" required />
         <input type="submit" value="submit" />
       </form>
     );
