@@ -1,15 +1,14 @@
 import React from 'react';
+import './ElectionCard.css';
 
 export const ElectionCard = props => {
-  console.log(props['district-divisions']);
+  let date = new Date(props.date).toString().substring(0, 15);
+
   return (
     <div className="election-card">
-      <h1>Election Card</h1>
-      {/* <h3>{description}</h3> */}
-      {/* <h3>{date}</h3>
-      <h3>Jurisdiction: {}</h3>
-      <a href={polling - place - url}>Your polling place</a>
-      <a href={website}>Your state's election website</a> */}
+      <h3>{props.description}</h3>
+      <h3>{date}</h3>
+      <a href={props['polling-place-url']}>Your polling website</a>
     </div>
   );
 };
