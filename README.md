@@ -2,7 +2,9 @@
 
 ![app title](public/form.png)
 
-Election Match is a basic app that matches users to nearby elections based on their address. When the user submits an address form, the address is translated into OCD-IDs or [Open Civic Data division identifiers](https://opencivicdata.readthedocs.io/en/latest/data/datatypes.html), and then used to query the Democracy Works Elections API for upcoming elections in the user's area. Any elections returned are displayed for the user. A live proxy server is used as an intermediary between the DemWorks API and this client side app. The backend repo is hosted on github [here](https://github.com/TMcMeans/election-match-backend) and hosted on Heroku.
+Election Match is a basic app that matches users to nearby elections based on their address. When the user submits an address form, the address is translated into OCD-IDs or [Open Civic Data division identifiers](https://opencivicdata.readthedocs.io/en/latest/data/datatypes.html), and then used to query the Democracy Works Elections API for upcoming elections in the user's area. Please use the [upcoming elections](https://github.com/democracyworks/dw-practical-upcoming-elections/wiki/Upcoming-Elections) link by Democracy Works to test current OCD_IDs that are in use.
+
+Any elections returned are displayed for the user. A live proxy server is used as an intermediary between the DemWorks API and this client side app. The backend repo is hosted on github [here](https://github.com/TMcMeans/election-match-backend) and hosted on Heroku.
 
 ## ⚙️ Initial Setup
 
