@@ -14,6 +14,7 @@ export const fetchElections = async () => {
     return electionData;
   } else {
     console.log(`${response.status}: ${response.statusText}`);
+    return `${response.status}: ${response.statusText}`;
   }
 };
 
@@ -35,5 +36,6 @@ export const postAddress = async ocd_id => {
     console.log('sucessfully sent user address to server');
   } else {
     console.log(`${response.status}: ${response.statusText}`);
+    return `${response.status}: ${response.statusText}`;
   }
 };
