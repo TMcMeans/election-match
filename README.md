@@ -1,14 +1,16 @@
 # Election Match
 
-(insert screenshot of app logo here)
+![app title](public/form.png)
 
-Election Match is a basic app that matches users to nearby elections based on their address. When the user submits an address form, the address is translated into OCD-IDs or [Open Civic Data division identifiers](https://opencivicdata.readthedocs.io/en/latest/data/datatypes.html), and then used to query the Democracy Works Elections API for upcoming elections in the user's area. Any elections returned are displayed for the user.
+Election Match is a basic app that matches users to nearby elections based on their address. When the user submits an address form, the address is translated into OCD-IDs or [Open Civic Data division identifiers](https://opencivicdata.readthedocs.io/en/latest/data/datatypes.html), and then used to query the Democracy Works Elections API for upcoming elections in the user's area. Please use the [upcoming elections](https://github.com/democracyworks/dw-practical-upcoming-elections/wiki/Upcoming-Elections) link by Democracy Works to test current OCD_IDs that are in use.
+
+Any elections returned are displayed for the user. A live proxy server is used as an intermediary between the DemWorks API and this client side app. The backend repo is hosted on github [here](https://github.com/TMcMeans/election-match-backend) and hosted on Heroku.
 
 ## ⚙️ Initial Setup
 
 OS X & Linux:
 
-After cloning this repo type the following commands into your terminal:
+After cloning this repo type the following commands into your terminal to install dependencies and start your (local) server:
 
 ```
 npm install
@@ -24,28 +26,25 @@ npm test
 ## Features
 
 The user is presented with an address form.
-(insert screenshot of above feature)
+![app form](public/form.png)
 
-The user submits the form and their address is translated into some OCD-IDs. The Democracy Works Election API is queried for upcoming elections in their area.
-(insert screenshot of above feature)
-
-The user's view updates to display any elections returned by the API.
-(insert screenshot of above feature)
+The user submits the form and their address is translated into some OCD-IDs. The Democracy Works Election API is queried for upcoming elections in their area. The user's view updates to display any elections returned by the API.
+![app results](public/results.png)
 
 ## Future Iterations
 
 Planned enhancements include:
 
-- (insert potential enhancement here)
+- Add more testing to functionality, in order to make the app more robust.
+- Include a loader component for enhanced UX while the user is waiting for the DemWorks API to query election results.
 
 ## 🏗 Tech Stack List
 
-- HTML/CSS
 - React
-- React Router 4
+- Node.js
+- Express
 - Jest
 - Enzyme
-- Travis CI
 - Heroku
 
 ## 📥 How To Contribute
